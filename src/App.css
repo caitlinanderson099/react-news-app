@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(218, 106, 125);
+  font-family: "Nunito Sans", sans-serif;
+
+}
+
+header {
+  padding: 30px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+#page-title {
+  padding: 20px;
+  color: white;
+}

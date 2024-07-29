@@ -5,14 +5,14 @@
 }
 
 body {
-  background-color: rgb(218, 106, 125);
+  background-color: rgb(230, 188, 195);
   font-family: "Nunito Sans", sans-serif;
 
 }
 
 header {
   padding: 30px;
-  background-color: #d33434;
+  background-color: #252323;
   color: white;
 }
 
@@ -21,11 +21,50 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-color: #5d3cd6;
+  background-color: #252323;
   color: white;
 }
 
-#page-title {
-  padding: 20px;
-  color: white;
+/* filters */
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.filter-flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+
+    label {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+}
+
+select {
+  padding: 5px;
+  border-radius: 9px;
+  border: none;
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+
+/* Articles */
+
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 30px;
+
+    .article {
+      background-color: #1f1f1f;
+      color: white;
+      border-radius: 9px;
+      padding: 10px;
+    }
 }

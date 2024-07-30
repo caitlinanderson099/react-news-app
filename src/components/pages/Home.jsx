@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useArticlesContext } from '../hooks/useArticlesContext';
+import { Newspaper } from 'react-bootstrap-icons';
 
 // API KEY
 const apiKey = import.meta.env.VITE_NEWS_API_KEY
@@ -76,7 +77,7 @@ const Home = () => {
       return (
         <div key={index} className='article'>
           <h2> {article.title} </h2>
-          <p> {article.description} </p>
+          {/* <p> {article.description} </p> */}
           <button onClick={() => handleReadMoreClick(index)}> Read More </button>
         </div>
       )
@@ -92,6 +93,9 @@ const Home = () => {
 
   return (
     <div className='home-container'>
+
+      <h2 id='title'> <Newspaper/>  News From Around The World </h2>
+
       <div className='filter-container'>
 
       {/* COUNTRY FILTERS */}

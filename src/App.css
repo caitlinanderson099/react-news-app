@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,500;1,800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Peralta&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +13,7 @@
 body {
   margin: 0;
   padding: 0px;
+  background-color: #1f1f1f;
 }
 
 body.no-scroll {
@@ -33,9 +33,9 @@ h1 {
 }
 
 h2 {
-  color: rgb(159, 8, 8);
   margin-bottom: 20px;
-  font-weight: 100;
+  font-family: "Berkshire Swash", sans-serif;
+  letter-spacing: 1px;
 }
 
 /* nav */
@@ -81,12 +81,19 @@ h2 {
 
 /* buttons */
 button {
-  background: none;
-  border: none;
-  display: block;
+  margin-top: 6px;
+  background-color: rgba(146,71,216,0.75);
+  color: white;
+  padding: 10px;
+  border-radius: 9px;
+  border: 2px solid rgba(146,71,216,0.75);
+  transition: all 0.3s ease;
 }
 
 button:hover {
+  background-color: white;
+  color: rgba(146,71,216,0.75);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -148,8 +155,22 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-color: #5b2ed6;
+  background-color: rgba(146,71,216,0.75);
   color: white;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  #title {
+    font-size: 3em;
+    color: white;
+    letter-spacing: 1px;
+  }
 }
 
 /* Filters */
@@ -157,11 +178,26 @@ footer {
   display: flex;
   align-items: center;
   justify-items: center;
+  gap: 40px;
 }
 
 .filter-flex-container {
   display: flex;
   flex-direction: column;
+
+  label {
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  select {
+    border: 2px solid rgba(146,71,216,0.75);
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 1.2em;
+  }
 }
 
 /* Articles */
@@ -169,44 +205,94 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
-  padding: 30px;
+  padding: 20px;
 }
 
 .article {
   padding: 10px;
-  border-right: 1px solid black;
+  border: 3px solid rgba(146,71,216,0.75);
+  border-radius: 9px;
+  background-color: white;
+
 }
+
 
 #about-me-page {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 60px;
   align-items: center;
-  background-color: rgb(59, 49, 65);
+  justify-content: center;
+  background-color: #1f1f1f;
   padding: 30px;
 
   .left-side {
-    /* border: 2px solid red; */
+    padding: 30px;
 
-    h2 {
-      color: white;
+    #me-card {
+      background-color: white;
+      width: 450px;
+      height: 500px;
+      border-radius: 9px;
+      padding: 10px;
+      border: 3px solid rgba(146,71,216,0.75);
+
+      h2 {
+        margin: 10px 0px;
+        font-family: "Berkshire Swash", sans-serif;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #1f1f1f;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 9px;
+      }
+
+      p {
+        font-size: 16px;
+      }
     }
   }
 
   .right-side {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 6px;
+    padding: 30px;
 
-    img {
-      width: 400px;
-      border-radius: 50px;
-      border: 5px double #5b2ed6;
+    h2 {
+      font-family: "Berkshire Swash", sans-serif;
+      font-size: 3em;
+      color: white;
+      margin-bottom: 30px;
     }
+   
+    #image-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
 
-    h3 {
-      font-size: 1.4em;
+      .grid-image {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      img {
+        width: 300px;
+        border: 3px solid rgba(146,71,216,0.75);
+        border-radius: 9px;
+        object-fit: cover;
+        transition: all 0.3s ease;
+      }
+
+      img:hover {
+        transition: all 0.3s ease;
+        box-shadow: 7px 7px 5px -2px rgba(146,71,216,0.75);
+        -webkit-box-shadow: 7px 7px 5px -2px rgba(146,71,216,0.75);
+        -moz-box-shadow: 7px 7px 5px -2px rgba(146,71,216,0.75);
+      }
     }
   }
 }

@@ -1,18 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,500;1,800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
 }
 
 body {
-  background-color: rgb(230, 188, 195);
-  font-family: "Nunito Sans", sans-serif;
-
+  margin: 0;
+  padding: 0px;
 }
 
-header {
-  padding: 30px;
-  background-color: #252323;
+body.no-scroll {
+  overflow-y: hidden;
+}
+
+label {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  color: rgb(159, 8, 8);
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+/* nav */
+#top-nav {
+  background: #1f1f1f;
+  display: flex;
+  padding: 20px;
+}
+
+#menu {
+  width: 75%;
+  padding-right: 30px;
+}
+
+#menu-button {
+  float: right;
+}
+
+#top-nav {
+  text-align: right;
+}
+
+#top-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+#top-nav #logo {
+    width: 25%;
+    font-weight: 600;
+    font-size: 28px;
+    margin-right: 30px;
+    text-align: left;
+}
+
+#button-container {
+  width: 50%;
+}
+
+/* buttons */
+button {
+  background: none;
+  border: none;
+  display: block;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  color: white;
+  font-size: 33px;
+  position: relative;
+  top: 2px;
+}
+
+#mobile-menu {
+  width: 100%;
+  height: 100%;
+  background-color: #1f1f1f;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 25%;
+}
+
+#mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+#close-nav-menu {
+  z-index: 2;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  font-size: 53px;
+  color: white;
+}
+
+#menu {
+  display: none;
+}
+
+#menu-container {
+  width: 100%;
+}
+
+#topnav a:hover {
+  color: #8797e5;
+}
+
+#menu a:hover {
   color: white;
 }
 
@@ -21,50 +148,94 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-color: #252323;
+  background-color: #5b2ed6;
   color: white;
 }
 
-/* filters */
+/* Filters */
 .filter-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .filter-flex-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 10px;
-
-    label {
-      font-weight: bold;
-      font-size: 1.2em;
-    }
+  display: flex;
+  flex-direction: column;
 }
-
-select {
-  padding: 5px;
-  border-radius: 9px;
-  border: none;
-  margin-top: 5px;
-  font-size: 17px;
-}
-
 
 /* Articles */
-
 .article-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-    padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  padding: 30px;
+}
 
-    .article {
-      background-color: #1f1f1f;
+.article {
+  padding: 10px;
+  border-right: 1px solid black;
+}
+
+#about-me-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(59, 49, 65);
+  padding: 30px;
+
+  .left-side {
+    /* border: 2px solid red; */
+
+    h2 {
       color: white;
-      border-radius: 9px;
-      padding: 10px;
     }
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    img {
+      width: 400px;
+      border-radius: 50px;
+      border: 5px double #5b2ed6;
+    }
+
+    h3 {
+      font-size: 1.4em;
+    }
+  }
+}
+
+
+
+/* Media queries */
+@media screen and (min-width: 780px) {
+  h1 {
+    font-size: 60px;
+  }
+  #menu {
+    display: block;
+    width: 75%;
+  }
+  #menu li {
+    display: inline-block;
+  }
+  #menu-container {
+    display: none;
+  }
+
+  .article-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .article-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

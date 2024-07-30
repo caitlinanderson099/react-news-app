@@ -2,13 +2,15 @@ import { Route, Routes } from 'react-router-dom'
 // page / component imports
 import Home from '../components/pages/Home'
 import SingleArticle from '../components/pages/SingleArticle'
+import AboutMe from '../components/pages/AboutMe'
 
 
 const Links = () => {
   return (
     <Routes>
       <Route exact path='/' element={<Home/>}/>
-      <Route path='/singlearticle' element={<SingleArticle/>}/>
+      <Route path='/article/:id' element={<SingleArticle/>}/>
+      <Route path='/about' element={<AboutMe/>}/>
     </Routes>
   )
 }
